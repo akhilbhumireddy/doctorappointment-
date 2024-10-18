@@ -1,20 +1,115 @@
 .home-page {
-  padding: 20px;
-  background-color: #eef2f7;
+  background-color: #f0f4f8;
+  min-height: 100vh;
 }
 
-.doctor-list {
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #2d3748;
+}
+
+.features {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 20px 0;
+  margin-bottom: 2rem;
 }
 
-/* Add margins between sections */
-.appointment-form {
-  margin-bottom: 30px;
+.feature {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.review-section {
-  margin-bottom: 30px;
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature h3 {
+  margin-top: 1rem;
+  color: #2d3748;
+}
+
+.feature p {
+  color: #4a5568;
+}
+
+.doctor-list h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3748;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .feature {
+    margin-bottom: 1rem;
+  }
 }

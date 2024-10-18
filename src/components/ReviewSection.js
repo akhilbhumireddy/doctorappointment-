@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/ReviewSection.css";
+import { Star } from "lucide-react";
 
 const reviews = [
   {
@@ -147,35 +148,37 @@ const reviews = [
 const ReviewSection = ({ selectedDoctor }) => {
   const [filteredReviews, setFilteredReviews] = useState([]);
 
-  // Filter reviews based on the selected doctor
   useEffect(() => {
     if (selectedDoctor) {
-      const doctorReviews = reviews.filter(
-        (review) => review.doctor === selectedDoctor.name
-      );
-      setFilteredReviews(doctorReviews);
+      // For demo purposes, we'll just show all reviews for any doctor
+      setFilteredReviews(reviews);
     }
   }, [selectedDoctor]);
 
   const renderStars = (rating) => {
-    return [...Array(5)].map((star, index) => (
-      <span key={index} className="star">
-        {index < rating ? "★" : "☆"}
-      </span>
+    return [...Array(5)].map((_, index) => (
+      <Star
+        key={index}
+        size={16}
+        fill={index < rating ? "#FFD700" : "none"}
+        stroke={index < rating ? "#FFD700" : "#000000"}
+      />
     ));
   };
 
   return (
     <div className="review-section">
-      <h2>Reviews for {selectedDoctor ? selectedDoctor.name : "Doctor"}</h2>
+      <h2>Patient Reviews</h2>
       <div className="review-list">
         {filteredReviews.length > 0 ? (
-          filteredReviews.map((review, index) => (
-            <div className="review" key={index}>
-              <div className="review-stars">{renderStars(review.rating)}</div>
-              <p>
-                <strong>{review.reviewer}:</strong> {review.comment}
-              </p>
+          filteredReviews.map((review) => (
+            <div className="review" key={review.id}>
+              <div className="review-header">
+                <div className="review-stars">{renderStars(review.rating)}</div>
+                <span className="review-date">{review.date}</span>
+              </div>
+              <p className="review-comment">{review.comment}</p>
+              <p className="review-author">- {review.reviewer}</p>
             </div>
           ))
         ) : (
