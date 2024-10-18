@@ -1,0 +1,25 @@
+header {
+  background-color: #007bff; /* Change to a deeper blue */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Adds space between elements */
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px; /* Space between links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Make it stack vertically on small screens */
+    align-items: flex-end;
+  }
+}

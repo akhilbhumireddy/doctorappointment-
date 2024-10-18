@@ -1,0 +1,20 @@
+.home-page {
+  padding: 20px;
+  background-color: #eef2f7;
+}
+
+.doctor-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+/* Add margins between sections */
+.appointment-form {
+  margin-bottom: 30px;
+}
+
+.review-section {
+  margin-bottom: 30px;
+}

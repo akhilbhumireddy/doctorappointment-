@@ -1,0 +1,29 @@
+.doctor-card {
+  text-align: center;
+  background-color: #f5f7fb;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #ffd600;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.call-button {
+  background-color: #ffd600;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
