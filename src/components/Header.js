@@ -8,10 +8,7 @@ const Header = () => {
     <header className="header">
       <div className="header-content">
         <Link to="/" className="logo">
-          <img
-            src="https://files.oaiusercontent.com/file-x1UCmrPu57tW22Ede8hYojcg?se=2024-10-18T06%3A25%3A37Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D8be0a495-1e1b-4f63-86fe-4672a4be5e01.webp&sig=ElIoNXvF9yqETQotcJke6PFNe%2BVPs5kTxM1p/MyWW%2BQ%3D"
-            alt="Doctor Appointment App"
-          />
+          <img src="https://files.oaiusercontent.com/file-x1UCmrPu57tW22Ede8hYojcg?se=2024-10-18T13%3A33%3A14Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D8be0a495-1e1b-4f63-86fe-4672a4be5e01.webp&sig=LiXq7KnL%2BkiI3FI/cVTMUQLkbeoX3cwgtipPE98/zkQ%3D" />
           <span>DocConnect</span>
         </Link>
         <nav>
