@@ -46,7 +46,7 @@ Implement the provided design using **React JS**, ensuring responsiveness and fu
 #### Must Have
 
 - **GitHub Repository**: [https://github.com/akhilbhumireddy/doctorappointment-.git]
-- **README.md**: Setup instructions and project description.
+- **Deployment Link**:[https://akhilsdoctorappointmentapp.netlify.app/]
 
 #### Nice to Have
 
