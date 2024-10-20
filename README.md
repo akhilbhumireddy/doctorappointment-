@@ -45,7 +45,7 @@ Implement the provided design using **React JS**, ensuring responsiveness and fu
 
 #### Must Have
 
-- **GitHub Repository**: Public repository with clear structure.
+- **GitHub Repository**: [https://github.com/akhilbhumireddy/doctorappointment-.git]
 - **README.md**: Setup instructions and project description.
 
 #### Nice to Have
