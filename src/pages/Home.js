@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import DoctorCard from "../components/DoctorCard";
-import ReviewSection from "../components/ReviewSection";
 import Footer from "../components/Footer";
 import { Search, Calendar, Star, Filter } from "lucide-react";
 import "../styles/Home.css";
@@ -130,12 +129,10 @@ const doctors = [
 
 const Home = () => {
   const navigate = useNavigate();
-  const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredDoctors, setFilteredDoctors] = useState(doctors);
 
   const goToDoctorProfile = (doctor) => {
-    setSelectedDoctor(doctor);
     navigate(`/doctor/${doctor.name}`, { state: { doctor } });
   };
 
@@ -153,20 +150,24 @@ const Home = () => {
       <Header />
       <main className="main-content">
         <section className="hero">
-          <h1>Find the Right Doctor, Right Now</h1>
-          <p>Book appointments with top-rated doctors in your area</p>
-          <div className="search-bar">
-            <Search size={20} />
-            <input
-              type="text"
-              placeholder="name or specialty"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <button className="filter-button">
-              <Filter size={20} />
-              Filter
-            </button>
+          <div className="hero-content">
+            <h1>Find the Right Doctor, Right Now</h1>
+            <p>Book appointments with top-rated doctors in your area</p>
+            <div className="search-container">
+              <div className="search-bar">
+                <Search size={20} />
+                <input
+                  type="text"
+                  placeholder="Search by name or specialty"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </div>
+              <button className="filter-button">
+                <Filter size={20} />
+                <span className="filter-text">Filter</span>
+              </button>
+            </div>
           </div>
         </section>
         <section className="features">
@@ -194,7 +195,6 @@ const Home = () => {
             ))}
           </div>
         </section>
-        {selectedDoctor && <ReviewSection selectedDoctor={selectedDoctor} />}
       </main>
       <Footer />
     </div>

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import "../styles/AppointmentForm.css";
 import { Calendar, Clock, User, Phone, MessageSquare } from "lucide-react";
 
-const Appointment = () => {
+const AppointmentForm = () => {
   const { state } = useLocation();
   const { doctor } = state || { doctor: { name: "Doctor" } };
   const navigate = useNavigate();
@@ -35,8 +35,8 @@ const Appointment = () => {
     <div className="appointment-page">
       <Header />
       <main className="main-content">
-        <h2>Book Appointment with Dr. {doctor.name}</h2>
         <form onSubmit={handleSubmit} className="appointment-form">
+          <h2>Book Appointment with Dr. {doctor.name}</h2>
           <div className="form-group">
             <label htmlFor="date">
               <Calendar size={16} /> Date:
@@ -116,4 +116,4 @@ const Appointment = () => {
   );
 };
 
-export default Appointment;
+export default AppointmentForm;
